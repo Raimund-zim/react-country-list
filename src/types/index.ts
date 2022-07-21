@@ -2,7 +2,7 @@ export type BageLabel = "area" | "population";
 
 export interface ICountry {
   name: string;
-  capital: string[];
+  capital: string;
   population: number;
   flag: string;
   area: number;

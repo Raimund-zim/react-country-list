@@ -9,11 +9,21 @@ export interface ICountry {
   region: string;
 }
 
+interface ICountryApiName {
+  official: string;
+  common: string;
+  nativeName: {
+    [nameType: string]: string | {} | undefined;
+  };
+}
+
 export interface ICountryApi {
-  name: { common: string };
+  name: ICountryApiName;
   capital: string[];
   population: number;
-  flags: { svg: string };
+  flags: {
+    [format: string]: string;
+  };
   area: number;
   region: string;
 }
@@ -21,4 +31,10 @@ export interface ICountryApi {
 export enum Color {
   Primary = "primary",
   Secondary = "secondary",
+  Success = "success",
+  Danger = "danger",
+  Warning = "warning",
+  Info = "info",
+  Light = "light",
+  Dark = "dark",
 }
